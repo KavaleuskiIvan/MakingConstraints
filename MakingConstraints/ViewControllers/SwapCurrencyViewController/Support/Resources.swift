@@ -8,7 +8,7 @@
 import UIKit
 
 enum Resources {
-    enum Colors {
+    struct Colors {
         static let converterBackroundBorderColor = UIColor(named: "converterBackroundBorderColor") ?? UIColor()
         static let converterBackgroundColor = UIColor(named: "converterBackroundColor") ?? UIColor()
         
