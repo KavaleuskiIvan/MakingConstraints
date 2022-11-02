@@ -13,14 +13,14 @@ class SelectTokenButton: UIButton {
     private let tokenImage: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.layer.cornerRadius = 16
+        image.layer.cornerRadius = Constants.TokenImage.cornerRadius
         return image
     }()
     
     private let smallerTokenImageBorder: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.layer.cornerRadius = 6
+        view.layer.cornerRadius = Constants.SmallerTokenImageBorder.cornerRadius
         view.backgroundColor = Resources.Colors.converterBackroundBorderColor
         return view
     }()
@@ -28,7 +28,7 @@ class SelectTokenButton: UIButton {
     private let smallerTokenImage: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.layer.cornerRadius = 6
+        image.layer.cornerRadius = Constants.SmallerTokenImage.cornerRadius
         return image
     }()
     
@@ -37,7 +37,7 @@ class SelectTokenButton: UIButton {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 1
         label.textAlignment = .center
-        label.font = UIFont(name: "Inter-Regular", size: 16)
+        label.font = UIFont(name: Constants.TokenTitleLabel.fontName, size: Constants.TokenTitleLabel.fontSize)
         label.textColor = Resources.Colors.selectTokenButtonTintColor
         return label
     }()
@@ -45,7 +45,7 @@ class SelectTokenButton: UIButton {
     private let tokenSelectArrowImage: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.image = UIImage(named: "tokenSelectArrow")?.withTintColor(Resources.Colors.tokenSelectArrowImageTintColor)
+        image.image = Constants.TokenSelectArrowImage.image?.withTintColor(Resources.Colors.tokenSelectArrowImageTintColor)
         return image
     }()
     
@@ -127,26 +127,32 @@ class SelectTokenButton: UIButton {
         struct TokenImage {
             static let height = 32
             static let width = 32
+            static let cornerRadius: CGFloat = 16
         }
         struct SmallerTokenImageBorder {
             static let height = 12
             static let width = 12
+            static let cornerRadius: CGFloat = 6
         }
         struct SmallerTokenImage {
             static let height = 10
             static let width = 10
             static let topOffset = 1
             static let trailingOffset = 1
+            static let cornerRadius: CGFloat = 6
+        }
+        struct TokenTitleLabel {
+            static let height = 24
+            static let leadingOffset = 8
+            static let fontName = "Inter-Regular"
+            static let fontSize: CGFloat = 16
         }
         struct TokenSelectArrowImage {
             static let height = 24
             static let width = 24
             static let topOffset = 4
             static let trailingOffset = 4
-        }
-        struct TokenTitleLabel {
-            static let height = 24
-            static let leadingOffset = 8
+            static let image = UIImage(named: "tokenSelectArrow")
         }
     }
 }

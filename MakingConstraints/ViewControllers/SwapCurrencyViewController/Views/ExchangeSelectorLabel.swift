@@ -13,16 +13,15 @@ class ExchangeSelectorLabel: UILabel {
     private let leftTokenImage: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.layer.cornerRadius = 8
+        image.layer.cornerRadius = Constants.LeftTokenImage.cornerRadius
         return image
     }()
     
     private let leftTokenValueLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.font = UIFont(name: "Inter-Regular", size: 12)
+        label.font = UIFont(name: Constants.LeftTokenValueLabel.fontName, size: Constants.LeftTokenValueLabel.fontSize)
         label.textColor = Resources.Colors.exchangeSelectorLabelTintColor
-        label.text = "Swap"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -31,7 +30,7 @@ class ExchangeSelectorLabel: UILabel {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = Resources.Colors.exchangeSelectorLabelTintColor
-        label.font = UIFont(name: "Inter-Regular", size: 12)
+        label.font = UIFont(name: Constants.EqualSignLabel.fontName, size: Constants.EqualSignLabel.fontSize)
         label.text = "="
         return label
     }()
@@ -39,14 +38,14 @@ class ExchangeSelectorLabel: UILabel {
     private let rightTokenImage: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.layer.cornerRadius = 8
+        image.layer.cornerRadius = Constants.RightTokenImage.cornerRadius
         return image
     }()
     
     private let rightTokenValueLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.font = UIFont(name: "Inter-Regular", size: 12)
+        label.font = UIFont(name: Constants.RightTokenValueLabel.fontName, size: Constants.RightTokenValueLabel.fontSize)
         label.textColor = Resources.Colors.exchangeSelectorLabelTintColor
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -65,7 +64,7 @@ class ExchangeSelectorLabel: UILabel {
     private func configureUI() {
         backgroundColor = Resources.Colors.exchangeSelectorLabelBackroundColor
         clipsToBounds = true
-        layer.cornerRadius = 13
+        layer.cornerRadius = Constants.Layer.cornerRadius
         
         configureLeftTokenImage()
         configureLeftTokenValueLabel()
@@ -131,29 +130,40 @@ class ExchangeSelectorLabel: UILabel {
     }
     
     private enum Constants {
+        struct Layer {
+            static let cornerRadius: CGFloat = 13
+        }
         struct LeftTokenImage {
             static let height = 12
             static let width = 12
             static let leadingOffset = 8
+            static let cornerRadius: CGFloat = 8
         }
         struct LeftTokenValueLabel {
             static let height = 19
             static let width = 6
             static let leadingOffset = 4
+            static let fontName = "Inter-Regular"
+            static let fontSize: CGFloat = 12
         }
         struct EqualSignLabel {
             static let height = 19
             static let leadingOffset = 4
+            static let fontName = "Inter-Regular"
+            static let fontSize: CGFloat = 12
         }
         struct RightTokenImage {
             static let height = 12
             static let width = 12
             static let leadingOffset = 4
+            static let cornerRadius: CGFloat = 8
         }
         struct RightTokenValueLabel {
             static let height = 19
             static let width = 46
             static let leadingOffset = 4
+            static let fontName = "Inter-Regular"
+            static let fontSize: CGFloat = 12
         }
     }
 }

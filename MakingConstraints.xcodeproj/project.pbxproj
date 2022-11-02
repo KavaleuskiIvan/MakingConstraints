@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		41463E31467374885C628C99 /* Pods_MakingConstraints.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32EDA4DE5C55477C941DBFEB /* Pods_MakingConstraints.framework */; };
+		C888F9D929119C71003EE468 /* SwapCurrencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C888F9D829119C71003EE468 /* SwapCurrencyView.swift */; };
 		C8DD6A432903DE1200CA896B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DD6A422903DE1200CA896B /* AppDelegate.swift */; };
 		C8DD6A452903DE1200CA896B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DD6A442903DE1200CA896B /* SceneDelegate.swift */; };
 		C8DD6A472903DE1200CA896B /* SwapCurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DD6A462903DE1200CA896B /* SwapCurrencyViewController.swift */; };
@@ -25,6 +26,7 @@
 		328EBC18FF35FB634AF114C7 /* Pods-MakingConstraints.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MakingConstraints.debug.xcconfig"; path = "Target Support Files/Pods-MakingConstraints/Pods-MakingConstraints.debug.xcconfig"; sourceTree = "<group>"; };
 		32EDA4DE5C55477C941DBFEB /* Pods_MakingConstraints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MakingConstraints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		33B12A775A9FB0F75F30E5E6 /* Pods-MakingConstraints.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MakingConstraints.release.xcconfig"; path = "Target Support Files/Pods-MakingConstraints/Pods-MakingConstraints.release.xcconfig"; sourceTree = "<group>"; };
+		C888F9D829119C71003EE468 /* SwapCurrencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapCurrencyView.swift; sourceTree = "<group>"; };
 		C8DD6A3F2903DE1200CA896B /* MakingConstraints.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakingConstraints.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8DD6A422903DE1200CA896B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8DD6A442903DE1200CA896B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,9 +87,9 @@
 		C888F9D429113A49003EE468 /* SwapCurrencyViewController */ = {
 			isa = PBXGroup;
 			children = (
+				C888F9D629113A6A003EE468 /* Views */,
 				C8DD6A462903DE1200CA896B /* SwapCurrencyViewController.swift */,
 				C888F9D729113B02003EE468 /* Support */,
-				C888F9D629113A6A003EE468 /* Views */,
 			);
 			path = SwapCurrencyViewController;
 			sourceTree = "<group>";
@@ -105,6 +107,7 @@
 			children = (
 				C8DD6A59290406D500CA896B /* SelectTokenButton.swift */,
 				C8DD6A872904303A00CA896B /* ExchangeSelectorLabel.swift */,
+				C888F9D829119C71003EE468 /* SwapCurrencyView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				C8DD6A4D2903DE1200CA896B /* MakingConstraints.xcdatamodeld in Sources */,
 				C8DD6A8C2904C64B00CA896B /* EmptyModalViewController.swift in Sources */,
 				C8DD6A432903DE1200CA896B /* AppDelegate.swift in Sources */,
+				C888F9D929119C71003EE468 /* SwapCurrencyView.swift in Sources */,
 				C8DD6A882904303A00CA896B /* ExchangeSelectorLabel.swift in Sources */,
 				C8DD6A452903DE1200CA896B /* SceneDelegate.swift in Sources */,
 			);
