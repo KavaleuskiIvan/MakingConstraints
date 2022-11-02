@@ -14,11 +14,14 @@ class SwapCurrencyViewController: UIViewController {
     
     let contentView: SwapCurrencyView = .init()
     
+    var viewModel = SwapCurrencyViewModel()
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        bindViewModel()
         setupKeyboardHide()
         configureObservers()
     }
@@ -28,6 +31,29 @@ class SwapCurrencyViewController: UIViewController {
     }
     
     // MARK: - Private methods
+    
+    private func bindViewModel() {
+        // topSelectTokenButton
+        viewModel.topSelectTokenButtonTitle.bind { (selectTokenButtonTitle) in
+            self.contentView.topSelectTokenButton.tokenTitleLabel.text = selectTokenButtonTitle
+        }
+        viewModel.topSelectTokenButtonImage.bind { (selectTokenButtonImage) in
+            self.contentView.topSelectTokenButton.tokenImage.image = selectTokenButtonImage
+        }
+        viewModel.topSelectTokenButtonSmallerImage.bind { (selectTokenButtonSmallerImage) in
+            self.contentView.topSelectTokenButton.smallerTokenImage.image = selectTokenButtonSmallerImage
+        }
+        // bottomSelectTokenButton
+        viewModel.bottomSelectTokenButtonTitle.bind { (selectTokenButtonTitle) in
+            self.contentView.bottomSelectTokenButton.tokenTitleLabel.text = selectTokenButtonTitle
+        }
+        viewModel.bottomSelectTokenButtonImage.bind { (selectTokenButtonImage) in
+            self.contentView.bottomSelectTokenButton.tokenImage.image = selectTokenButtonImage
+        }
+        viewModel.bottomSelectTokenButtonSmallerImage.bind { (selectTokenButtonSmallerImage) in
+            self.contentView.bottomSelectTokenButton.smallerTokenImage.image = selectTokenButtonSmallerImage
+        }
+    }
     
     private func setupKeyboardHide() {
         let tapScreen = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
@@ -44,8 +70,9 @@ class SwapCurrencyViewController: UIViewController {
     }
     
     @objc func selectTokenButtonPressed() {
-        let emptyModalVC = EmptyModalViewController()
-        present(emptyModalVC, animated: true)
+//        let emptyModalVC = EmptyModalViewController()
+//        present(emptyModalVC, animated: true)
+        viewModel.selectTokenButtonPressed()
     }  
 }
 

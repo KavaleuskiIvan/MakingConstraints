@@ -108,9 +108,9 @@ class SwapCurrencyView: UIView {
     
     private(set) lazy var topSelectTokenButton: SelectTokenButton = {
         let button = SelectTokenButton()
-        button.configure(tokenImage: UIImage(named: "iconEverToken") ?? UIImage(),
-                         smallerTokenImage: UIImage(named: "iconEverToken") ?? UIImage(),
-                         tokenTitle: "EVER")
+//        button.configure(tokenImage: UIImage(named: "iconEverToken") ?? UIImage(),
+//                         smallerTokenImage: UIImage(named: "iconEverToken") ?? UIImage(),
+//                         tokenTitle: "EVER")
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -126,9 +126,9 @@ class SwapCurrencyView: UIView {
     
     private(set) lazy var bottomSelectTokenButton: SelectTokenButton = {
         let button = SelectTokenButton()
-        button.configure(tokenImage: UIImage(named: "iconTetherToken") ?? UIImage(),
-                         smallerTokenImage: UIImage(named: "iconEthToken") ?? UIImage(),
-                         tokenTitle: "USDT")
+//        button.configure(tokenImage: UIImage(named: "iconTetherToken") ?? UIImage(),
+//                         smallerTokenImage: UIImage(named: "iconEthToken") ?? UIImage(),
+//                         tokenTitle: "USDT")
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()

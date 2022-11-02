@@ -10,7 +10,7 @@ import SnapKit
 
 class SelectTokenButton: UIButton {
     
-    private let tokenImage: UIImageView = {
+    private(set) var tokenImage: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.layer.cornerRadius = Constants.TokenImage.cornerRadius
@@ -25,14 +25,14 @@ class SelectTokenButton: UIButton {
         return view
     }()
     
-    private let smallerTokenImage: UIImageView = {
+    private(set) var smallerTokenImage: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.layer.cornerRadius = Constants.SmallerTokenImage.cornerRadius
         return image
     }()
     
-    private let tokenTitleLabel: UILabel = {
+    private(set) var tokenTitleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 1
